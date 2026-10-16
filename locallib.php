@@ -227,7 +227,7 @@ class assign_feedback_aif extends assign_feedback_plugin {
      * @param int $gradeid The grade ID.
      * @return string The saved text content.
      */
-    public function get_editor_text($name, $gradeid): string {
+    public function get_editor_text($name, $gradeid, ?int $markid = null): string {
         global $DB;
         if ($name === 'aif') {
             // Get the grade to find the assignment and user.
@@ -248,7 +248,7 @@ class assign_feedback_aif extends assign_feedback_plugin {
      * @param int $gradeid The grade ID.
      * @return bool True if the text was saved.
      */
-    public function set_editor_text($name, $value, $gradeid): bool {
+    public function set_editor_text($name, $value, $gradeid, ?int $markid = null): bool {
         global $DB;
         if ($name === 'aif') {
             // Get the grade to find the assignment and user.
